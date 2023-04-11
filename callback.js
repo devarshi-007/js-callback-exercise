@@ -13,3 +13,9 @@ function multiply(n1,n2,cb){
 function print(str){
     console.log(str);
 }
+
+multiply(5,4,function(firstResult){
+    multiply(3,2,function(secondResult){
+        sum(firstResult,secondResult,print);
+    })
+})
